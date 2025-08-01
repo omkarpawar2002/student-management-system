@@ -1,0 +1,51 @@
+{% include 'base.html' %}
+
+{% block title %}
+<title>SHOW STUDENT</title>
+{% endblock %}
+
+{% block content %}
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th>STUDENT ROLL</th>
+            <th>FIRST NAME</th>
+            <th>LAST NAME</th>
+            <th>AGE</th>
+            <th>CITY</th>
+            <th>GENDER</th>
+            <th>MOBILE NO</th>
+            <th>SUBJECTS</th>
+            <!-- <th>EMAIL ID</th> -->
+            <th>PASSWORD</th>
+            <th>ELIGIBILITY</th>
+            <th>ACTIONS</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in records %}
+        <tr>
+            <td>{{record.roll}}</td>
+            <td>{{record.first_name}}</td>
+            <td>{{record.last_name}}</td>
+            <td>{{record.age}}</td>
+            <td>{{record.city}}</td>
+            <td>{{record.gender}}</td>
+            <td>{{record.mobile_no}}</td>
+            <td>{{record.subjects}}</td>
+            <!-- <td>{{record.email}}</td> -->
+            <td>{{record.password}}</td>
+            <td>{{record.eligible}}</td>
+            <td>
+                <a href="{% url 'update_stu' record.roll %}"><button
+                        class="btn btn-outline-light btn-large me-3">UPDATE</button></a>
+                <a href="{% url 'delete_stu' record.roll %}"><button
+                        class="btn btn-outline-light btn-large">DELETE</button></a>
+
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

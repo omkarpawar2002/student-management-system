@@ -1,0 +1,38 @@
+# Python
+*.py[cod]
+__pycache__/
+*.so
+
+# Django
+*.sqlite3
+db.sqlite3
+/static/
+/media/
+
+# Environment variables
+.env
+.env/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+
+# Migrations - ignore everything except __init__.py
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db

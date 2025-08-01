@@ -1,0 +1,22 @@
+{% include 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+<title>DELETE STUDENT</title>
+{% endblock %}
+
+{% block content %}
+<div class="container" style="background-color: #886565;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);">
+    <h1 style="text-align: center;">DELETE STUDENT ADMISSION FORM</h1>
+    <form method="post">
+        {% csrf_token %}
+        <h1 style="text-align: center;">{{record.roll}} {{record.first_name}} {{record.last_name}}</h1>
+        <button type="submit" class="btn btn-light col-5">DELETE STUDENT</button>
+        <a href="{% url 'show_stu' %}"><button type="button" class="btn btn-light col-5 float-end">CANCEL
+                STUDENT</button></a>
+    </form>
+</div>
+{% endblock %}

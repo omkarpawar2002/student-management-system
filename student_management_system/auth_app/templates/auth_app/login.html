@@ -1,0 +1,31 @@
+{% include 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+<title>LOGIN ACTIVATED</title>
+{% endblock %}
+
+{% block content %}
+<div class="container" style="background-color: #886565;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);">
+    <h1 style="text-align: center;">SIGN IN / LOG IN</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <label for="username">USERNAME</label>
+            <input type="email" name="username" class="form-control" id="username" placeholder="Enter username">
+        </div>
+        <br>
+        <div>
+            <label for="password">PASSWORD</label>
+            <input type="password" name="password" class="form-control" id="password" placeholder="********">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-light col-5">LOG IN</button>
+        <a href="{% url 'signup' %}"><button type="button" class="btn btn-light col-5 float-end">REGISTER</button></a>
+    </form>
+
+</div>
+{% endblock %}
