@@ -17,7 +17,9 @@ A Django-based web application to manage student records with full CRUD operatio
 ## 🚀 Getting Started
 
 1. Clone the repo  
+```bash
    `git clone https://github.com/omkarpawar2002/student-management-system.git`
+```
 
 2. Create virtual environment  
    `python -m venv venv`  
