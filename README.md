@@ -45,7 +45,8 @@ A Django-based web application to manage student records with full CRUD operatio
    python manage.py runserver
 ```
 
-## 🧑‍💻 Developed by 
-**[Omkar Pawar]**
-GitHub : (https://github.com/omkarpawar2002)
+## 🙋‍♂️ Developed by 
+
+**Omkar Pawar**  
+[GitHub](https://github.com/omkarpawar2002)
 
